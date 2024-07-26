@@ -13,7 +13,7 @@ const Register=({setIsLoggedIn})=>{
         e.preventDefault();
 
         try {
-            const response=await axios.post(`http://localhost:3000/api/auth/register`, {name, email, password});
+            const response=await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, {name, email, password});
             localStorage.setItem("token", response.data.token);
             alert('Registration successful');
             navigate('/login');
