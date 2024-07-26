@@ -16,7 +16,9 @@ connectDB().catch((error)=>{
     process.exit(1);
 });
 
-app.use(cors());
+app.use(cors({
+    origin: "https://expense-sharing-application.vercel.app/"
+}));
 
 app.use(express.json());
 

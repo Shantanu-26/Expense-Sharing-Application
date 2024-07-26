@@ -1,5 +1,5 @@
 import express from 'express';
-import { createGroup, getUserGroups, getGroupDetails, deleteGroup } from '../controllers/GroupController.js';
+import { createGroup, getUserGroups, getGroupDetails, deleteGroup } from '../controllers/groupController.js';
 import authMiddleware from '../middleware/authMiddleware.js';
 
 const router = express.Router();
